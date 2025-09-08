@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez la mission et la vision d'EduConnect Cameroun, la plateforme de référence pour le placement éducatif au Cameroun.">
+    <title>À propos | EduConnect Cameroun</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-green-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i data-feather="book-open" class="h-8 w-8"></i>
+                    <span class="text-xl font-bold">EduConnect</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="hover:text-green-200 font-medium">Accueil</a>
+                    <a href="repetiteurs.html" class="hover:text-green-200 font-medium">Répétiteurs</a>
+                    <a href="enseignants.html" class="hover:text-green-200 font-medium">Enseignants</a>
+                    <a href="#" class="text-green-200 font-medium border-b-2 border-green-200">À propos</a>
+                    <a href="contact.html" class="hover:text-green-200 font-medium">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none" id="menu-btn">
+                    <i data-feather="menu" class="h-6 w-6"></i>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden py-4" id="mobile-menu">
+                <a href="index.html" class="block py-2 hover:text-green-200">Accueil</a>
+                <a href="repetiteurs.html" class="block py-2 hover:text-green-200">Répétiteurs</a>
+                <a href="enseignants.html" class="block py-2 hover:text-green-200">Enseignants</a>
+                <a href="#" class="block py-2 text-green-200">À propos</a>
+                <a href="contact.html" class="block py-2 hover:text-green-200">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-green-600 to-green-500 text-white py-16 px-4">
+        <div class="container mx-auto">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">À propos d'EduConnect</h1>
+            <p class="text-lg max-w-2xl" data-aos="fade-up" data-aos-delay="100">
+                Notre engagement pour l'éducation de qualité au Cameroun
+            </p>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-20 px-4 bg-white">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Notre Mission</h2>
+                    <p class="text-gray-600 mb-6">
+                        EduConnect Cameroun a été créée pour répondre à un besoin crucial dans le système éducatif camerounais : faciliter la mise en relation entre les familles cherchant des répétiteurs qualifiés et les établissements scolaires privés à la recherche d'enseignants compétents.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Nous offrons une plateforme sécurisée où les demandes sont traitées avec la plus grande confidentialité. Les identités des parties ne sont révélées qu'après validation mutuelle par notre équipe, garantissant ainsi des relations harmonieuses et professionnelles.
+                    </p>
+                    <div class="flex items-center space-x-4 mt-8">
+                        <div class="flex -space-x-2">
+                            <div class="w-10 h-10 rounded-full bg-gray-300"></div>
+                            <div class="w-10 h-10 rounded-full bg-gray-400"></div>
+                            <div class="w-10 h-10 rounded-full bg-gray-500"></div>
+                        </div>
+                        <p class="text-sm text-gray-600">Équipe dédiée à votre service</p>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="bg-gray-100 rounded-xl overflow-hidden">
+                        <img src="http://static.photos/education/640x360/5" alt="Équipe EduConnect" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nos Valeurs</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Les principes qui guident notre action quotidienne
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="lock" class="text-green-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Confidentialité</h3>
+                    <p class="text-gray-600">
+                        Nous protégeons les données personnelles et assurons l'anonymat des parties jusqu'à la validation finale.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="award" class="text-green-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Qualité</h3>
+                    <p class="text-gray-600">
+                        Nous sélectionnons rigoureusement les enseignants et vérifions leurs compétences avant toute mise en relation.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="heart" class="text-green-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Engagement</h3>
+                    <p class="text-gray-600">
+                        Nous nous engageons à faciliter l'accès à une éducation de qualité pour tous les élèves camerounais.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="zap" class="text-green-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Efficacité</h3>
+                    <p class="text-gray-600">
+                        Nous optimisons le processus de recrutement pour gagner du temps aux familles et établissements.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="500">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="dollar-sign" class="text-green-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Transparence</h3>
+                    <p class="text-gray-600">
+                        Pas de frais cachés. Des tarifs clairs et équitables pour tous les services proposés.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="600">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="map" class="text-green-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Local</h3>
+                    <p class="text-gray-600">
+                        Spécialistes du territoire camerounais avec une parfaite connaissance des besoins éducatifs locaux.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="py-20 px-4 bg-white">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="bg-gray-100 rounded-xl overflow-hidden">
+                        <img src="http://static.photos/education/640x360/10" alt="Vision EduConnect" class="w-full h-auto">
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Notre Vision</h2>
+                    <p class="text-gray-600 mb-6">
+                        Devenir la plateforme de référence pour le placement éducatif au Cameroun, en connectant efficacement tous les acteurs du système éducatif : familles, enseignants et établissements scolaires.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Nous aspirons à révolutionner le recrutement des enseignants et répétiteurs en apportant modernité, transparence et efficacité à un secteur encore trop informel.
+                    </p>
+                    <div class="mt-8">
+                        <button onclick="openWhatsApp('Je souhaite en savoir plus sur votre vision')" 
+                                class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
+                            Échangez avec notre directeur
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">L'Équipe</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Passionnés par l'éducation et l'innovation technologique
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-32 h-32 rounded-full bg-gray-300 mx-auto mb-6 overflow-hidden">
+                        <img src="http://static.photos/people/200x200/1" alt="Directeur" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Jean Dupont</h3>
+                    <p class="text-green-600 font-medium mb-4">Fondateur & Directeur</p>
+                    <p class="text-gray-600 text-sm">
+                        15 ans d'expérience dans l'éducation au Cameroun. Expert en pédagogie et gestion scolaire.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-32 h-32 rounded-full bg-gray-300 mx-auto mb-6 overflow-hidden">
+                        <img src="http://static.photos/people/200x200/2" alt="Responsable Pédagogique" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Marie Ngo</h3>
+                    <p class="text-green-600 font-medium mb-4">Responsable Pédagogique</p>
+                    <p class="text-gray-600 text-sm">
+                        Ancienne enseignante et directrice d'école, spécialiste en évaluation des compétences enseignantes.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-32 h-32 rounded-full bg-gray-300 mx-auto mb-6 overflow-hidden">
+                        <img src="http://static.photos/people/200x200/3" alt="Responsable Technique" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">David Mbassi</h3>
+                    <p class="text-green-600 font-medium mb-4">Responsable Technique</p>
+                    <p class="text-gray-600 text-sm">
+                        Développeur passionné par l'EdTech, il conçoit et entretient notre plateforme numérique.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4 bg-green-600 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Prêt à trouver le bon enseignant ou répétiteur?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Contactez-nous dès maintenant pour discuter de vos besoins éducatifs.
+            </p>
+            <button onclick="openWhatsApp('Bonjour, je souhaite discuter de mes besoins en enseignement')" 
+                    class="bg-white text-green-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
+                Contactez notre équipe
+            </button>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="javascript:void(0);" onclick="openWhatsApp('Bonjour, je souhaite obtenir des informations');" 
+       class="whatsapp-float bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl transition duration-300">
+        <i data-feather="message-circle" class="w-6 h-6"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i data-feather="book-open" class="h-8 w-8 text-green-400"></i>
+                        <span class="text-xl font-bold text-white">EduConnect</span>
+                    </div>
+                    <p class="mb-4">
+                        La plateforme de référence pour le placement éducatif au Cameroun.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-green-400"><i data-feather="facebook"></i></a>
+                        <a href="#" class="hover:text-green-400"><i data-feather="twitter"></i></a>
+                        <a href="#" class="hover:text-green-400"><i data-feather="linkedin"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="repetiteurs.html" class="hover:text-green-400">Répétiteurs à domicile</a></li>
+                        <li><a href="enseignants.html" class="hover:text-green-400">Recrutement enseignant</a></li>
+                        <li><a href="contact.html" class="hover:text-green-400">Consultation pédagogique</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i data-feather="phone" class="mr-2 mt-1 w-4 h-4"></i>
+                            <a href="tel:+237XXXXXXXXX" class="hover:text-green-400">+237 XX XX XX XX</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="mail" class="mr-2 mt-1 w-4 h-4"></i>
+                            <a href="mailto:contact@educonnect-cm.com" class="hover:text-green-400">contact@educonnect-cm.com</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="mr-2 mt-1 w-4 h-4"></i>
+                            <span>Douala, Cameroun</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Newsletter</h3>
+                    <p class="mb-4">Abonnez-vous pour recevoir nos dernières offres</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Votre email" class="bg-gray-700 text-white px-4 py-2 rounded-l focus:outline-none focus:ring-1 focus:ring-green-400 w-full">
+                        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-r">
+                            <i data-feather="send"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-sm">
+                <p>&copy; 2023 EduConnect Cameroun. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu toggle for mobile
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Open WhatsApp with predefined message
+        function openWhatsApp(message) {
+            const phoneNumber = "+237XXXXXXXXX"; // Replace with admin's number
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+        }
+
+        // Initialize AOS and Feather Icons
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+            feather.replace();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Besoins en Répétiteurs - EduConnect Cameroun</title>
+    <meta name="description" content="Découvrez les besoins en répétiteurs à domicile au Cameroun. Trouvez des opportunités d'enseignement adaptées à votre profil.">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2B6CB0',
+                        secondary: '#3182CE',
+                        accent: '#ED8936',
+                        cameroon: {
+                            green: '#007A5E',
+                            red: '#CE1126',
+                            yellow: '#FCD116'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 100;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
+        }
+        .subject-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background-color: #EBF4FF;
+            margin-right: 12px;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #3182CE;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 100%;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        th {
+            background-color: #F9FAFB;
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #F9FAFB;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/237XXXXXXXXX?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services%20de%20placement%20éducatif." target="_blank" class="floating-whatsapp">
+        <i data-feather="message-circle" class="text-white" width="28" height="28"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-primary">EduConnect<span class="text-cameroon-green">.cm</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-primary">Accueil</a>
+                    <a href="repetiteurs.html" class="nav-link text-primary font-semibold">Répétiteurs</a>
+                    <a href="enseignants.html" class="nav-link text-gray-700 hover:text-primary">Enseignants</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-primary">À propos</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-primary">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="text-gray-500 hover:text-primary" id="mobile-menu-button">
+                        <i data-feather="menu" width="24" height="24"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white shadow-lg" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-blue-50 rounded-md">Accueil</a>
+                <a href="repetiteurs.html" class="block px-3 py-2 text-primary font-semibold hover:bg-blue-50 rounded-md">Répétiteurs</a>
+                <a href="enseignants.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-blue-50 rounded-md">Enseignants</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-blue-50 rounded-md">À propos</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-blue-50 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-24 pb-12 md:pt-32 md:pb-16 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">Besoins en Répétiteurs</h1>
+                <p class="text-xl max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    Découvrez les opportunités de soutien scolaire pour accompagner les élèves dans leur réussite
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="py-8 bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+                <h2 class="text-xl font-semibold text-gray-800">Filtrer les besoins</h2>
+                <div class="flex flex-wrap gap-3">
+                    <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <option>Toutes les matières</option>
+                        <option>Mathématiques</option>
+                        <option>Physique-Chimie</option>
+                        <option>Français</option>
+                        <option>Anglais</option>
+                        <option>Philosophie</option>
+                        <option>Histoire-Géographie</option>
+                        <option>SVT</option>
+                    </select>
+                    <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <option>Tous les niveaux</option>
+                        <option>Primaire</option>
+                        <option>Collège</option>
+                        <option>Lycée</option>
+                        <option>Université</option>
+                    </select>
+                    <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <option>Toutes les villes</option>
+                        <option>Douala</option>
+                        <option>Yaoundé</option>
+                        <option>Bafoussam</option>
+                        <option>Garoua</option>
+                        <option>Maroua</option>
+                        <option>Bamenda</option>
+                        <option>Buéa</option>
+                    </select>
+                    <button class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-secondary transition">
+                        Appliquer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Needs Table -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Matière</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Niveau</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Localisation</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Fréquence</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr data-aos="fade-up">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="subject-icon">
+                                            <span>📘</span>
+                                        </div>
+                                        <div class="text-sm font-medium text-gray-900">Mathématiques</div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">Terminale</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">Douala, Bonanjo</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">3x/semaine</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <a href="https://wa.me/237XXXXXXXXX?text=Je%20suis%20intéressé(e)%20par%20le%20besoin%20en%20répétiteur%20de%20Mathématiques%20à%20Terminale%20à%20Douala." 
+                                       class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition flex items-center justify-center">
+                                        <i data-feather="message-circle" width="16" height="16" class="mr-2"></i>
+                                        Postuler
+                                    </a>
+                                </td>
+                            </tr>
+                            
+                            <tr data-aos="fade-up" data-aos-delay="100">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="subject-icon">
+                                            <span>🧪</span>
+                                        </div>
+                                        <div class="text-sm font-medium text-gray-900">Physique-Chimie</div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">1ère</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">Yaoundé, Bastos</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">2x/semaine</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <a href="https://wa.me/237XXXXXXXXX?text=Je%20suis%20intéressé(e)%20par%20le%20besoin%20en%20répétiteur%20de%20Physique-Chimie%20à%201ère%20à%20Yaoundé." 
+                                       class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition flex items-center justify-center">
+                                        <i data-feather="message-circle" width="16" height="16" class="mr-2"></i>
+                                        Postuler
+                                    </a>
+                                </td>
+                            </tr>
+                            
+                            <tr data-aos="fade-up" data-aos-delay="200">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="subject-icon">
+                                            <span>🇫🇷</span>
+                                        </div>
+                                        <div class="text-sm font-medium text-gray-900">Français</div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">4ème</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">Bafoussam</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">2x/semaine</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <a href="https://wa.me/237XXXXXXXXX?text=Je%20suis%20intéressé(e)%20par%20le%20besoin%20en%20répétiteur%20de%20Français%20à%204ème%20à%20Bafoussam." 
+                                       class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition flex items-center justify-center">
+                                        <i data-feather="message-circle" width="16" height="16" class="mr-2"></i>
+                                        Postuler
+                                    </a>
+                                </td>
+                            </tr>
+                            
+                            <tr data-aos="fade-up" data-aos-delay="300">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="subject-icon">
+                                            <span>🇬🇧</span>
+                                        </div>
+                                        <div class="text-sm font-medium text-gray-900">Anglais</div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">CM2</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">Douala, Akwa</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">3x/semaine</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <a href="https://wa.me/237XXXXXXXXX?text=Je%20suis%20intéressé(e)%20par%20le%20besoin%20en%20répétiteur%20d'Anglais%20à%20CM2%20à%20Douala." 
+                                       class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition flex items-center justify-center">
+                                        <i data-feather="message-circle" width="16" height="16" class="mr-2"></i>
+                                        Postuler
+                                    </a>
+                                </td>
+                            </tr>
+                            
+                            <tr data-aos="fade-up" data-aos-delay="400">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="subject-icon">
+                                            <span>📘</span>
+                                        </div>
+                                        <div class="text-sm font-medium text-gray-900">Mathématiques</div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">6ème</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">Garoua</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">2x/semaine</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <a href="https://wa.me/237XXXXXXXXX?text=Je%20suis%20intéressé(e)%20par%20le%20besoin%20en%20répétiteur%20de%20Mathématiques%20à%206ème%20à%20Garoua." 
+                                       class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition flex items-center justify-center">
+                                        <i data-feather="message-circle" width="16" height="16" class="mr-2"></i>
+                                        Postuler
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center" data-aos="fade-up">
+                <p class="text-gray-600 mb-4">Vous ne trouvez pas une offre correspondant à votre profil ?</p>
+                <a href="https://wa.me/237XXXXXXXXX?text=Bonjour,%20je%20suis%20enseignant%20et%20je%20souhaite%20être%20informé%20des%20nouvelles%20opportunités%20de%20répétition." 
+                   class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-secondary transition">
+                    <i data-feather="bell" width="18" height="18" class="mr-2"></i>
+                    Être alerté des nouveaux besoins
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-800">Comment postuler ?</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                        <i data-feather="search" width="24" height="24"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">1. Trouvez une offre</h3>
+                    <p class="text-gray-600">Parcourez les besoins en répétiteurs et trouvez celui qui correspond à vos compétences.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                        <i data-feather="message-circle" width="24" height="24"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">2. Postulez via WhatsApp</h3>
+                    <p class="text-gray-600">Cliquez sur "Postuler" pour être redirigé vers WhatsApp avec un message pré-rempli.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                        <i data-feather="users" width="24" height="24"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">3. Attendez notre retour</h3>
+                    <p class="text-gray-600">Notre directeur prendra contact avec vous pour discuter des modalités.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">EduConnect<span class="text-cameroon-green">.cm</span></h3>
+                    <p class="text-gray-300">Votre plateforme de placement éducatif de confiance au Cameroun.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Liens rapides</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition">Accueil</a></li>
+                        <li><a href="repetiteurs.html" class="text-gray-300 hover:text-white transition">Répétiteurs</a></li>
+                        <li><a href="enseignants.html" class="text-gray-300 hover:text-white transition">Enseignants</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition">À propos</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Nos services</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-300">Placement de répétiteurs</li>
+                        <li class="text-gray-300">Recrutement d'enseignants</li>
+                        <li class="text-gray-300">Conseil en éducation</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Contactez-nous</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-300">
+                            <i data-feather="phone" class="mr-2" width="16" height="16"></i>
+                            +237 XX XX XX XX
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i data-feather="mail" class="mr-2" width="16" height="16"></i>
+                            contact@educonnect.cm
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i data-feather="map-pin" class="mr-2" width="16" height="16"></i>
+                            Cameroun
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 text-sm">© 2023 EduConnect.cm - Tous droits réservés</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-300 hover:text-white transition">
+                        <i data-feather="facebook" width="18" height="18"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">
+                        <i data-feather="twitter" width="18" height="18"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">
+                        <i data-feather="instagram" width="18" height="18"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
